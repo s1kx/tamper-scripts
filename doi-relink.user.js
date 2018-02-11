@@ -18,11 +18,10 @@
 
 var customDOI = 'https://free.science/'
 window.addEventListener('load', function() {
-   var scihubUrl = '';
    var els = document.getElementsByTagName("A");
    for(var i = 0, l = els.length; i < l; i++) {
       var el = els[i];
-      var link = el.href.replace(/^((http(s|))?:?\/\/)?(www\.)?(dx\.|)doi\.org\//gi, scihubUrl);
+      var link = el.href.replace(/^((http(s|))?:?\/\/)?(www\.)?(dx\.|)doi\.org\//gi, customDOI);
       el.href = link;
 
       // Supposed to add a new link rather than replacing the current one,
